@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏡 House Price Predictor</h1>
+        <p>Enter the details below to estimate the price.</p>
+
+        <div class="input-group">
+            <label for="location">📍 Location:</label>
+            <select id="location"></select>
+        </div>
+
+        <div class="input-group">
+            <label for="sqft">📏 Total Sqft:</label>
+            <input type="number" id="sqft" placeholder="Enter total square feet">
+        </div>
+
+        <div class="input-group">
+            <label for="bhk">🛏️ BHK:</label>
+            <input type="number" id="bhk" placeholder="Number of bedrooms">
+        </div>
+
+        <div class="input-group">
+            <label for="bath">🚿 Bathrooms:</label>
+            <input type="number" id="bath" placeholder="Number of bathrooms">
+        </div>
+
+        <button onclick="predictPrice()">💰 Predict Price</button>
+
+        <h2 id="result">Estimated Price: <span>---</span></h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
