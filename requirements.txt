@@ -6,3 +6,5 @@ xgboost==1.7.6
 seaborn
 joblib
 flask
+gunicorn
+flask-cors
