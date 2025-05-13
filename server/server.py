@@ -3,9 +3,11 @@ from flask_cors import CORS
 import util
 app=Flask(__name__)
 CORS(app)
+
 @app.route('/')
 def home():
-    return render_template('app.html')
+    return render_template('index.html')
+
 @app.route('/get_location_names')
 def get_location_names():
     response = jsonify({
@@ -27,6 +29,10 @@ def predict_home_price():
     })
     response.headers.add('Access-Control-Allow-Origin', '*')  # Allow all origins
     return response
+
+
+
+
 if __name__ == "__main__":
     print("starting python flask server for home price prediction")
     util.load_saved_artifacts()
