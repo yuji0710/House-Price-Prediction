@@ -27,10 +27,10 @@ def get_location_names():
 def load_saved_artifacts():
     print('loading saved artifacts... start')
     global __location, __data_columns,__model
-    with open("./artifacts/columns.json", "r") as f:
+    with open("server/artifacts/columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         __location=__data_columns[3:]
-    with open("./artifacts/banglore_home_prices_model.pickle","rb") as f:
+    with open("server/artifacts/banglore_home_prices_model.pickle","rb") as f:
         __model=pickle.load(f)
     print('loading saved artifacts... done')
 
