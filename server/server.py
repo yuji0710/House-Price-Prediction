@@ -6,6 +6,7 @@ CORS(app)
 @app.route('/')
 def home():
     return render_template('app.html')
+    
 @app.route('/get_location_names')
 def get_location_names():
     response = jsonify({
